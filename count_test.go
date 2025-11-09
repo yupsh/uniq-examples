@@ -3,13 +3,13 @@ package uniq_test
 import (
 	"strings"
 
-	yup "github.com/gloo-foo/framework"
+	gloo "github.com/gloo-foo/framework"
 	. "github.com/yupsh/uniq"
 )
 
 func ExampleUniq_count() {
 	// echo "apple\napple\nbanana\napple" | uniq -c
-	yup.MustRun(
+	gloo.MustRun(
 		Uniq(Count, strings.NewReader("apple\napple\nbanana\napple")),
 	)
 	// Output:
@@ -17,4 +17,3 @@ func ExampleUniq_count() {
 	//       1 banana
 	//       1 apple
 }
-
